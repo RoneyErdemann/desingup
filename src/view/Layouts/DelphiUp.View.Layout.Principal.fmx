@@ -1,0 +1,103 @@
+object LayoutPrincipal: TLayoutPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Layout3: TLayout
+      Align = Client
+      Size.Width = 580.000000000000000000
+      Size.Height = 420.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Rectangle1: TRectangle
+        Align = Contents
+        Size.Width = 580.000000000000000000
+        Size.Height = 420.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object Layout5: TLayout
+        Align = Client
+        Size.Width = 580.000000000000000000
+        Size.Height = 420.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object MultiView1: TMultiView
+          MasterButton = Button1
+          Mode = Drawer
+          Size.Width = 250.000000000000000000
+          Size.Height = 420.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+          TabOrder = 0
+          object Rectangle5: TRectangle
+            Align = Contents
+            Size.Width = 250.000000000000000000
+            Size.Height = 420.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+        end
+      end
+    end
+    object ToolBar1: TToolBar
+      Size.Width = 640.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Rectangle2: TRectangle
+        Align = Contents
+        Size.Width = 640.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Layout4: TLayout
+        Align = Left
+        Size.Width = 60.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle3: TRectangle
+          Align = Contents
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+    end
+    object Layout2: TLayout
+      Align = Left
+      Position.Y = 60.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 420.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Rectangle4: TRectangle
+        Align = Contents
+        Fill.Color = xFF8AF73D
+        Size.Width = 60.000000000000000000
+        Size.Height = 420.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object Button1: TButton
+        Position.X = -20.000000000000000000
+        Position.Y = 16.000000000000000000
+        TabOrder = 0
+        Text = 'Button1'
+      end
+    end
+  end
+end
