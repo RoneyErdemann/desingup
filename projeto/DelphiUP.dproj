@@ -5,7 +5,7 @@
         <FrameworkType>FMX</FrameworkType>
         <MainSource>DelphiUP.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>37983</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -390,6 +390,8 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -409,6 +411,42 @@
         </DCCReference>
         <DCCReference Include="..\src\view\Services\DelphiUp.View.Services.Routers.pas"/>
         <DCCReference Include="..\src\view\Styles\DelphiUp.View.Styles.pas"/>
+        <DCCReference Include="..\src\view\Pages\DelphiUp.View.Pages.Menu.Principal.pas">
+            <Form>PageMenuPrincipal</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\Component\DelphiUp.View.Component.Button1.pas">
+            <Form>ComponentButton001</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <RcItem Include="..\src\view\Assest\cart.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_cart</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\graph.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_graph</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\home.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_home</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\market.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_market</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\price.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_price</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\sale.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_sale</ResourceId>
+        </RcItem>
+        <RcItem Include="..\src\view\Assest\star.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ic_star</ResourceId>
+        </RcItem>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -435,8 +473,21 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                <DeployFile LocalName="..\src\view\Assest\cart.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win32\Debug\DelphiUP.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>DelphiUP.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\src\view\Assest\price.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -450,15 +501,50 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="bin\DelphiUP.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>DelphiUP.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win32\Debug\DelphiUP.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\src\view\Assest\graph.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="bin\DelphiUP.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>DelphiUP.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\src\view\Assest\market.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\src\view\Assest\sale.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\src\view\Assest\star.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\src\view\Assest\home.png" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

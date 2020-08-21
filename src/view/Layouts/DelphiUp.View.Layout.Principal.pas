@@ -29,7 +29,6 @@ type
     Layout4: TLayout;
     Rectangle3: TRectangle;
     Rectangle4: TRectangle;
-    Button1: TButton;
     Layout5: TLayout;
     MultiView1: TMultiView;
     Rectangle5: TRectangle;
@@ -48,7 +47,7 @@ var
 implementation
 
 uses
-  DelphiUp.View.Styles;
+  DelphiUp.View.Styles, DelphiUp.View.Pages.Menu.Principal;
 
 {$R *.fmx}
 
@@ -67,6 +66,13 @@ function TLayoutPrincipal.Render: TFMXObject;
 begin
   Result := Layout1;
   ApplyStyle;
+
+  Layout2.AddObject(
+    TPageMenuPrincipal
+      .Create(Self)
+      .MultiView(MultiView1)
+      .Component
+  );
 end;
 
 procedure TLayoutPrincipal.UnRender;
